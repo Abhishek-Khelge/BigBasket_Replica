@@ -13,10 +13,10 @@ public class UserDetails {
     @SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 8)
     private Long userId;
 
-    @Column(length = 10, nullable = false, unique = true)
+    @Column(length = 10, nullable = false)
     private String mobileNo;
 
-    @Column(length = 40, nullable = false,unique = true)
+    @Column(length = 40, nullable = false)
     private String emailId;
 
     @Column(length = 5, nullable = false)
@@ -80,7 +80,7 @@ public class UserDetails {
         this.password = password;
     }
 
-    public List<AddressDetails> getAddressList(){
+    public List<AddressDetails> getAddressDetailsList() {
         return addressDetailsList;
     }
 

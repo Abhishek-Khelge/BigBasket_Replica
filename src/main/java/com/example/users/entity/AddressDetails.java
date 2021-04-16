@@ -23,7 +23,7 @@ public class AddressDetails {
     private String city;
 
     @ManyToOne
-    @JoinColumn(name = "userId", nullable = false)
+    @JoinColumn(name = "userId")
     @JsonBackReference
     private UserDetails userDetails;
 
@@ -140,6 +140,7 @@ public class AddressDetails {
     public void setCity(String city) {
         this.city = city;
     }
+
     public UserDetails getUserDetails() {
         return userDetails;
     }

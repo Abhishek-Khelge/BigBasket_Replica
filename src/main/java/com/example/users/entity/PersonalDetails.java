@@ -17,7 +17,7 @@ public class PersonalDetails {
     private String landlineNo;
 
     @OneToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "userId", nullable = false)
     UserDetails userDetails;
 
     public PersonalDetails() {
@@ -78,5 +78,13 @@ public class PersonalDetails {
 
     public void setLandlineNo(String landlineNo) {
         this.landlineNo = landlineNo;
+    }
+
+    public UserDetails getUserDetails() {
+        return userDetails;
+    }
+
+    public void setUserDetails(UserDetails userDetails) {
+        this.userDetails = userDetails;
     }
 }
